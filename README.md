@@ -1,6 +1,6 @@
 # Httpebble Utils
 
-A collection of utility functions to be used when writing [Pebble][3] apps using the [Katharine][2]'s [httpebble library][1].
+A collection of utility functions to be used when writing [Pebble][3] apps using [Katharine][2]'s [httpebble library][1].
 
 ### Error Message
 
