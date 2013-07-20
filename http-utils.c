@@ -1,6 +1,6 @@
 include "http-utils.h"
 
-char* httpebble_message(int error_code) {
+char* httpebble_error(int error_code) {
   if (error_code > 1000) {
     error_code -= 1000;
   }
