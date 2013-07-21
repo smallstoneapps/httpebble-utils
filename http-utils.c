@@ -1,4 +1,6 @@
-include "http-utils.h"
+#include "pebble_os.h"
+#include "http.h"
+#include "http-utils.h"
 
 char* httpebble_error(int error_code) {
   if (error_code > 1000) {
@@ -61,17 +63,17 @@ char* httpebble_error(int error_code) {
       return "Not Found";
     break;
     case 405:
-      return "Method Not Allowed"
+      return "Method Not Allowed";
     break;
   }
 
-  if (error >= 500 && error < 600) {
+  if (error_code >= 500 && error_code < 600) {
     return "HTTP Server Error";
   }
-  else if (error > 400 && error < 500) {
+  else if (error_code > 400 && error_code < 500) {
     return "HTTP Client Error";
   }
-  else if (error > 300 && error < 300) {
+  else if (error_code > 300 && error_code < 300) {
     return "HTTP Redirection";
   }
 
